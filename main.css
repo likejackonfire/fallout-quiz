@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("https://wallpaperplay.com/walls/full/4/3/6/294231.jpg"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: auto;
+  }
+
+#startBtn {
+    padding: 15px;
+    font-size: 30px;
+  }
+
+button,
+.submitButton {
+  display: block;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-weight: 900;
+}
