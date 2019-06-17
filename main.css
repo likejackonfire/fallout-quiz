@@ -27,3 +27,14 @@ button,
   padding: 10px;
   font-weight: 900;
 }
+
+submitButton:hover,
+button:hover {
+    background: black;
+    color: white;
+}
+
+#question-box {
+    color: white;
+    opacity: 0.5;
+}

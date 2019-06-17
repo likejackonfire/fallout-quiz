@@ -34,7 +34,7 @@ function handleStartBtnClicked() {
 
   function startQuiz() {
     $('#startbutton').remove();
-    $('#questionBox').css('display', 'block');
+    $('#question-box').css('display', 'block');
     questionNumber = 0;
     $('.questionNumber').text(1);
     $('.score').text(0);
@@ -43,18 +43,18 @@ function handleStartBtnClicked() {
   function renderView() {
     if (!currentState.startBtnVisible && questionNumber === undefined) {
       startQuiz();
-      $('#questionBox').html(generateQuestion());
+      $('#question-box').html(generateQuestion());
     } else if (currentState.submitClicked) {
       displayQuestionResult(currentState.userAnswerCorrect);
     } else if (currentState.nextBtnClicked && questionNumber < STORE.length) {
-      $('#questionBox').html(generateQuestion());
+      $('#question-box').html(generateQuestion());
     } else if (currentState.nextBtnClicked && questionNumber >= STORE.length) {
       Results();
     } else {
       $('.questionNumber').text(questionNumber + 1);
       $('.score').text(0);
       $('.progress-bar').css('width', '0');
-      $('#questionBox').html(generateQuestion());
+      $('#question-box').html(generateQuestion());
     }
   }
 
@@ -100,7 +100,7 @@ function handleStartBtnClicked() {
   }
   
   function handleClickSubmitBtn() {
-    $('#questionBox').on('submit',function(event) {
+    $('#question-box').on('submit',function(event) {
       event.preventDefault();
       checkAnswer();
     });
@@ -124,12 +124,12 @@ function handleStartBtnClicked() {
   function displayQuestionResult(result) {
     if (result) {
       $(`.question-${questionNumber}`).css('display', 'none');
-      $('#questionBox').html(`
+      $('#question-box').html(`
     <p class="answerText"> Correct! </p> 
     <button type="submit" class="nextButton">Next</button>`);
     } else {
       $(`.question-${questionNumber}`).css('display', 'none');
-      $('#questionBox').html(`
+      $('#question-box').html(`
     <p class="answerText"> Incorrect. The correct answer is ${
     currentState.questions.currCorrectAnswer
   } </p> 
@@ -138,7 +138,7 @@ function handleStartBtnClicked() {
   }
   
   function handleNextButton() {
-    $('#questionBox').on('click', '.nextButton', function(event) {
+    $('#question-box').on('click', '.nextButton', function(event) {
       event.preventDefault();
       questionNumber++;
       if (questionNumber < STORE.length) {
@@ -156,7 +156,7 @@ function handleStartBtnClicked() {
   }
   
   function Results() {
-    $('#questionBox').html(`
+    $('#question-box').html(`
     <h1>Your Stats!</h1>
     <hr>
     <h1>Questions Attempted: <span class="text-orange">${questionNumber}</span></h1>
@@ -182,7 +182,7 @@ function handleStartBtnClicked() {
   }
   
   function restartQuiz() {
-    $('#questionBox').on('click', '#resetBtn', function(event) {
+    $('#question-box').on('click', '#resetBtn', function(event) {
       questionNumber = 0;
       updateCurrentState(questionNumber);
       currentState.questions.currCorrect = 0;
