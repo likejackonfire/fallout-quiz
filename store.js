@@ -4,7 +4,7 @@
 const STORE = [
     {
         question:
-        "What is the characters name in fallout 1?",
+        "What is the characters name in Fallout 1?",
         answers: [
             "The Chosen One",
             "The Lone Wanderer",
