@@ -5,11 +5,13 @@ body {
 
 html {
     background: #367cd1 url("https://wallpaperplay.com/walls/full/4/3/6/294231.jpg") no-repeat center;
-    background-size: cover;
+    background-size: contain;
     min-height: 100%;
 }
 
-
+h1 {
+   text-align: center; 
+}
 #startBtn {
     padding: 15px;
     font-size: 30px;
