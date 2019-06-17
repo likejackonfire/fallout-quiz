@@ -26,14 +26,14 @@ function updateCurrentState(questionNumber) {
   }
 
 function handleStartBtnClicked() {
-    $('#startBtn').on('click', function() {
+    $('#startbutton').on('click', function() {
       currentState.startBtnVisible = false;
       renderView();
     });
   }
 
   function startQuiz() {
-    $('#startBtn').remove();
+    $('#startbutton').remove();
     $('#questionBox').css('display', 'block');
     questionNumber = 0;
     $('.questionNumber').text(1);
