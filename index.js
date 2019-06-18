@@ -120,12 +120,6 @@ function handleStartBtnClicked() {
     currentState.userAnswerCorrect = false;
     currentState.submitClicked = false;
   }
-
-  function handleScore() {
-    score ++
-    $('.score').text(score);
-    console.log(`Score is ${score}`);
-}
   
   function displayQuestionResult(result) {
     if (result) {
