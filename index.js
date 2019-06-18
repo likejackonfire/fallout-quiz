@@ -171,7 +171,7 @@ function handleStartBtnClicked() {
     <p> You had ${
     currentState.questions.currCorrect
   } out of ${questionNumber} correct. </p> 
-    <button id="resetBtn" type="submit" class="resetQuizButton">Reset Quiz</button>`);
+    <button id="resetButton" type="submit" class="resetQuizButton">Reset Quiz</button>`);
   }
   
   function handleQuiz() {
@@ -182,7 +182,7 @@ function handleStartBtnClicked() {
   }
   
   function restartQuiz() {
-    $('#question-box').on('click', '#resetBtn', function(event) {
+    $('#question-box').on('click', '#resetButton', function(event) {
       questionNumber = 0;
       updateCurrentState(questionNumber);
       currentState.questions.currCorrect = 0;
