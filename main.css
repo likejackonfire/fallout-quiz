@@ -12,8 +12,21 @@ html {
 h1 {
    text-align: center; 
 }
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  nav li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
 #startbutton {
-    padding: 15px;
+    padding: 5px;
     font-size: 30px;
   }
 
@@ -26,6 +39,7 @@ button,
   border: none;
   padding: 10px;
   font-weight: 900;
+  
 }
 
 submitButton:hover,
@@ -48,3 +62,11 @@ fieldset {
     border: none;
     background: #80808075;
 }
+
+.progress-bar {
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    background: white;
+  }
