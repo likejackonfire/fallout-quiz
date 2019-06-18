@@ -159,13 +159,13 @@ function handleStartBtnClicked() {
     $('#question-box').html(`
     <h1>Your Stats!</h1>
     <hr>
-    <h1>Questions Attempted: <span class="text-orange">${questionNumber}</span></h1>
-    <h1>Correct Answers: <span class="text-orange">${
+    <h1>Questions Attempted: <span class="text-white">${questionNumber}</span></h1>
+    <h1>Correct Answers: <span class="text-white">${
     currentState.questions.currCorrect
   }</span></h1>
-    <h1>Percentage: <span class="text-orange">${currentState.questions
+    <h1>Percentage: <span class>${currentState.questions
       .currCorrect * 20}%</span></h3>
-    <h1>Missed: <span class="text-orange">${5 -
+    <h1>Missed: <span class="text-white">${10 -
       currentState.questions.currCorrect}</span></h1>
     <div class="progress-bar></div>
     <p> You had ${
