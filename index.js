@@ -167,20 +167,14 @@ function handleStartBtnClicked() {
       .currCorrect * 10}%</span></h3>
     <h1>Missed: <span class="text-white">${10 -
       currentState.questions.currCorrect}</span></h1>
-    <div class="progress-bar></div>
+  
     <p> You had ${
     currentState.questions.currCorrect
   } out of ${questionNumber} correct. </p> 
+    <div class="progress-bar></div>
     <button id="resetButton" type="submit" class="resetQuizButton">Reset Quiz</button>`);
   }
-  
-  function handleQuiz() {
-    handleStartBtnClicked();
-    handleClickSubmitBtn();
-    handleNextButton();
-    restartQuiz();
-  }
-  
+
   function restartQuiz() {
     $('#question-box').on('click', '#resetButton', function(event) {
       questionNumber = 0;
@@ -188,6 +182,13 @@ function handleStartBtnClicked() {
       currentState.questions.currCorrect = 0;
       renderView();
     });
+  }
+  
+  function handleQuiz() {
+    handleStartBtnClicked();
+    handleClickSubmitBtn();
+    handleNextButton();
+    restartQuiz();
   }
   
   $(handleQuiz());
