@@ -164,7 +164,7 @@ function handleStartBtnClicked() {
     currentState.questions.currCorrect
   }</span></h1>
     <h1>Percentage: <span class>${currentState.questions
-      .currCorrect * 20}%</span></h3>
+      .currCorrect * 10}%</span></h3>
     <h1>Missed: <span class="text-white">${10 -
       currentState.questions.currCorrect}</span></h1>
     <div class="progress-bar></div>

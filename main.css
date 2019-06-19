@@ -26,7 +26,7 @@ nav ul {
   }
 
 #startbutton {
-    padding: 5px;
+    padding: 15px;
     font-size: 30px;
   }
 
@@ -65,6 +65,13 @@ fieldset {
     background: #80808075;
     max-width: 475px;
 }
+
+#resetButton {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+  }
 
 .progress-bar {
     left: 0;
