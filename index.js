@@ -167,7 +167,6 @@ function handleStartBtnClicked() {
       .currCorrect * 10}%</span></h3>
     <h1>Missed: <span class="text-white">${10 -
       currentState.questions.currCorrect}</span></h1>
-  
     <p> You had ${
     currentState.questions.currCorrect
   } out of ${questionNumber} correct. </p> 
@@ -177,10 +176,7 @@ function handleStartBtnClicked() {
 
   function restartQuiz() {
     $('#question-box').on('click', '#resetButton', function(event) {
-      questionNumber = 0;
-      updateCurrentState(questionNumber);
-      currentState.questions.currCorrect = 0;
-      renderView();
+        location.reload();
     });
   }
   
