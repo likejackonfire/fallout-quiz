@@ -170,7 +170,7 @@ function handleStartBtnClicked() {
     <p> You had ${
     currentState.questions.currCorrect
   } out of ${questionNumber} correct. </p> 
-    <div class="progress-bar></div>
+    <div class="progress-bar"></div>
     <button id="resetButton" type="submit" class="resetQuizButton">Reset Quiz</button>`);
   }
 
