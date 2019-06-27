@@ -41,9 +41,14 @@ nav ul {
     font-weight: 900;
   }
 
-#startbutton {
+  #startbutton {
     padding: 15px;
     font-size: 30px;
+    position: fixed;
+    margin-top: -15px;   
+  	margin-left: -100px;
+    bottom: 25%;
+    left: 50%;
   }
 
 button,
@@ -57,6 +62,7 @@ button,
   margin-top: 30px;
   margin-left: 30px;
   font-weight: 900;
+  font-size: 20px;
   
 }
 
@@ -81,6 +87,11 @@ button:hover {
 fieldset {
     border: none;
     max-width: 475px;
+}
+
+.nextButton {
+    margin: auto;
+    font-size: 20px;
 }
 
 #resetButton {
